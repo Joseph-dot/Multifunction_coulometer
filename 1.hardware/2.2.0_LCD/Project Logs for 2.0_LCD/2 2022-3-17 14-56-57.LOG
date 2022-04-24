@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=Touch_RST Pin=JP1-19
+Removed Pin From Net: NetName=Touch_SDA Pin=JP1-20
+Removed Pin From Net: NetName=Touch_SCL Pin=JP1-21
+Removed Pin From Net: NetName=Touch_INT Pin=JP1-22
+Added Pin To Net: NetName=Touch_INT Pin=JP1-19
+Added Pin To Net: NetName=Touch_SCL Pin=JP1-20
+Added Pin To Net: NetName=Touch_SDA Pin=JP1-21
+Added Pin To Net: NetName=Touch_RST Pin=JP1-22
+Added Room: Name=2.0_LCD

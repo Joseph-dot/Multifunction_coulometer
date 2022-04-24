@@ -1,0 +1,13 @@
+Added Component: Designator=M1(M2*4.5*2.5*0.8*3.3)
+Added Component: Designator=M2(M2*4.5*2.5*0.8*3.3)
+Added Component: Designator=M3(M2*4.5*2.5*0.8*3.3)
+Added Component: Designator=M4(M2*4.5*2.5*0.8*3.3)
+Added Pin To Net: NetName=GND Pin=M1-1
+Added Pin To Net: NetName=GND Pin=M2-1
+Added Pin To Net: NetName=GND Pin=M3-1
+Added Pin To Net: NetName=GND Pin=M4-1
+Added Member To Class: ClassName=2.0_LCD Member=Component M1 M2
+Added Member To Class: ClassName=2.0_LCD Member=Component M2
+Added Member To Class: ClassName=2.0_LCD Member=Component M3 M2
+Added Member To Class: ClassName=2.0_LCD Member=Component M4 M2
+Added Room: Name=2.0_LCD

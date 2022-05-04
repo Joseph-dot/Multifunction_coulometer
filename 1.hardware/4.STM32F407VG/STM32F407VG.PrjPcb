@@ -200,6 +200,23 @@ GenerateClassCluster=0
 DocumentUniqueId=CDQROUTT
 
 [Document10]
+DocumentPath=SCH\2.0_LCD.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=UJCBIZGD
+
+[Document11]
 DocumentPath=PCB\STM32F407VG.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -216,7 +233,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=IFKNPGQJ
 
-[Document11]
+[Document12]
 DocumentPath=PCB\板框.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1

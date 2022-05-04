@@ -1,7 +1,8 @@
-Record=TopLevelDocument|FileName=Flash.SchDoc|SheetNumber=5
-Record=NoMainPathDocument|SourceDocument=Flash.SchDoc|FileName=ICM20608.SchDoc|SheetNumber=7
-Record=NoMainPathDocument|SourceDocument=Flash.SchDoc|FileName=Power_1.SchDoc|SheetNumber=1
-Record=NoMainPathDocument|SourceDocument=Flash.SchDoc|FileName=Power_2.SchDoc|SheetNumber=2
-Record=NoMainPathDocument|SourceDocument=Flash.SchDoc|FileName=SDCard.SchDoc|SheetNumber=6
-Record=NoMainPathDocument|SourceDocument=Flash.SchDoc|FileName=STM32F407VG_A.SchDoc|SheetNumber=3
-Record=NoMainPathDocument|SourceDocument=Flash.SchDoc|FileName=STM32F407VG_B.SchDoc|SheetNumber=4
+Record=TopLevelDocument|FileName=2.0_LCD.SchDoc|SheetNumber=8
+Record=NoMainPathDocument|SourceDocument=2.0_LCD.SchDoc|FileName=Flash.SchDoc|SheetNumber=5
+Record=NoMainPathDocument|SourceDocument=2.0_LCD.SchDoc|FileName=ICM20608.SchDoc|SheetNumber=7
+Record=NoMainPathDocument|SourceDocument=2.0_LCD.SchDoc|FileName=Power_1.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=2.0_LCD.SchDoc|FileName=Power_2.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=2.0_LCD.SchDoc|FileName=SDCard.SchDoc|SheetNumber=6
+Record=NoMainPathDocument|SourceDocument=2.0_LCD.SchDoc|FileName=STM32F407VG_A.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=2.0_LCD.SchDoc|FileName=STM32F407VG_B.SchDoc|SheetNumber=4

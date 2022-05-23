@@ -1,2 +1,3 @@
-Record=TopLevelDocument|FileName=ADS131A04.SchDoc|SheetNumber=2
+Record=TopLevelDocument|FileName=ADS131A04.SchDoc|SheetNumber=3
 Record=NoMainPathDocument|SourceDocument=ADS131A04.SchDoc|FileName=Power.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=ADS131A04.SchDoc|FileName=TypeC_IN&OUT.SchDoc|SheetNumber=2

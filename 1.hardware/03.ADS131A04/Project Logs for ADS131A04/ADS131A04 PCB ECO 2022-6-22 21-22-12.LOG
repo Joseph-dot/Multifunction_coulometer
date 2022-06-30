@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=GND Pin=JP1-0
+Removed Pin From Net: NetName=GND Pin=JP1-0
+Change Component Footprint: Designator=C5 Old Footprint=C0603_L New Footprint=C0402_L

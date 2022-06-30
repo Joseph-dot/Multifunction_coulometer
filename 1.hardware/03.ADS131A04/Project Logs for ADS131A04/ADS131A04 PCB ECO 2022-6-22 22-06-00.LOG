@@ -1,0 +1,6 @@
+Change Component Comment : Designator=U2 Old Comment=LP2992 New Comment=LP2992-3.3
+Added Pin To Net: NetName=VCC_3V3 Pin=R15-2
+Added Pin To Net: NetName=VCC_3V3 Pin=R16-2
+Added Pin To Net: NetName=VCC_3V3 Pin=R17-2
+Added Room: Name=ADS131A04
+Added Room: Name=Power

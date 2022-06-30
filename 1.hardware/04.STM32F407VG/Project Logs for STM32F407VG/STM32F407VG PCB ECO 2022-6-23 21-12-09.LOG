@@ -1,0 +1,21 @@
+Change Component Designator: OldDesignator=JP? NewDesignator=JP3
+Added Component: Designator=M1(M2)
+Added Component: Designator=M2(M2)
+Added Component: Designator=M3(M2)
+Added Component: Designator=M4(M2)
+Added Pin To Net: NetName=GND Pin=M1-1
+Added Pin To Net: NetName=GND Pin=M2-1
+Added Pin To Net: NetName=GND Pin=M3-1
+Added Pin To Net: NetName=GND Pin=M4-1
+Added Member To Class: ClassName=Power_2 Member=Component M1 M2
+Added Member To Class: ClassName=Power_2 Member=Component M2
+Added Member To Class: ClassName=Power_2 Member=Component M3 M2
+Added Member To Class: ClassName=Power_2 Member=Component M4 M2
+Added Room: Name=Flash
+Added Room: Name=ICM20608
+Added Room: Name=LCD_ADS131A04
+Added Room: Name=Power_1
+Added Room: Name=Power_2
+Added Room: Name=SDCard
+Added Room: Name=STM32F407VG_A
+Added Room: Name=STM32F407VG_B

@@ -1,0 +1,11 @@
+#ifndef __LED_H
+#define __LED_H
+
+#include "sys.h"
+#include "main.h"
+
+void user_led(void);
+void led_on(void);
+void led_off(void);
+
+#endif

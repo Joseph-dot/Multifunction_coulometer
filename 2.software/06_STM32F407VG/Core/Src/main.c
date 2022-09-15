@@ -37,6 +37,7 @@
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"
 #include "stm32f4xx_it.h"
+#include "ads131A04.h"
 
 #include "lv_demo_benchmark.h"
 #include "lv_demo_music.h"
@@ -51,6 +52,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+#define LVGL_ENABLE 0
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -114,24 +117,29 @@ int main(void)
 	LCD_Init();
 	cst026_init();
 //	NVIC_Init();
-	
-//	lv_init();
-//	lv_port_disp_init();
-//	lv_port_indev_init();
-//	HAL_TIM_Base_Start_IT(&htim2);
+
+#if LVGL_ENABLE
+	lv_init();
+	lv_port_disp_init();
+	lv_port_indev_init();
+	HAL_TIM_Base_Start_IT(&htim2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 //	lv_demo_benchmark();
 //	lv_demo_music();
-//	lv_demo_widgets();
+	lv_demo_widgets();
 //	lv_demo_stress();
+#endif
   while (1)
   {
-//		lv_timer_handler();
+#if LVGL_ENABLE
+		lv_timer_handler();
 		led_off();
 		delay_ms(5);
+#endif
+		
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

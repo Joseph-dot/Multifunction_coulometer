@@ -8,4 +8,7 @@
 
 05:LED+LCD+HighSpeedColorFill+PowerControl+KeyControl+LVGL8.3.0+Timer
 
+bug:lvgl will get stuck running some demos
+
 06:LED+LCD+HighSpeedColorFill+PowerControl+KeyControl+LVGL8.3.0+Timer+ADS131A04
+

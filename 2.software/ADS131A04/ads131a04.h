@@ -1,7 +1,82 @@
+/**
+ *
+ * \copyright Copyright (C) 2020 Texas Instruments Incorporated - http://www.ti.com/
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions
+ *  are met:
+ *
+ *    Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ *    Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the
+ *    distribution.
+ *
+ *    Neither the name of Texas Instruments Incorporated nor the names of
+ *    its contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ *  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ *  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ *  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ *  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ *  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ *  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
+
 #ifndef ADS131A04_H_
 #define ADS131A04_H_
-#include "sys.h"
+
+
+// Standard libraries
+#include <assert.h>
+#include <stdint.h>
 #include <stdbool.h>
+
+// Custom libraries
+
+
+//
+// Configure Register settings - NOTE: These values can be change, but FIXED mode is recommended!
+//
+
+    // Fixed SPI Frame Mode - NOTE: Dynamic frame mode requires additional logic
+    // (not provided in this example code) to prevent the F_SPI error flag.
+    #define SET_FIXED
+
+    // CRC Enable - NOTE: In this example enabling CRC will increase the amount
+    // of time it takes the MCU to construct and send an SPI frame!
+    //#define SET_CRC_EN
+
+    // CRC Mode - Selects which SPI words get included in the CRC computation
+    //#define SET_CRC_MODE
+
+
+//
+// Pin settings - NOTE: These values are NOT configurable in this example!
+// This example code is only targeted at asynchronous slave mode with hamming validation turned off.
+//
+
+    // M0 -> Tied to IOVDD
+    #define ASYNC_SLAVE_MODE
+
+    // M1 -> Tied to GND
+    #define WORD_LENGTH_BITS        ((uint8_t) 24)
+    #define WORD_LENGTH_24BIT
+    //#define WORD_LENGTH_16BIT
+    //#define WORD_LENGTH_32BIT
+
+    // M2 -> Tied to GND
+    //#define HAMMING_ENABLED
+
 
 //****************************************************************************
 //
@@ -19,6 +94,7 @@ typedef struct
     uint16_t crc;
 
 } adc_data_struct;
+
 
 
 //**********************************************************************************
@@ -60,6 +136,16 @@ int32_t     signExtend(const uint8_t dataBytes[]);
 
 // NOTE: The following command(s) are not implemented in this example...
 //#define OPCODE_WREGS                            ((uint16_t) 0x6000)
+
+
+
+//**********************************************************************************
+//
+// Register definitions
+//
+//**********************************************************************************
+
+#define NUM_REGISTERS           ((uint8_t) 21)
 
 
 /* Register 0x00 (ID_MSB) definition
@@ -241,6 +327,8 @@ int32_t     signExtend(const uint8_t dataBytes[]);
     #define STAT_M2_M0PIN_M0_SYNC_MASTER									((uint8_t) 0x00)
     #define STAT_M2_M0PIN_M0_ASYNC_SLAVE									((uint8_t) 0x01)
     #define STAT_M2_M0PIN_M0_SYNC_SLAVE										((uint8_t) 0x02)
+
+
 
 /* Register 0x08 (RESERVED0) definition
  * -------------------------------------------------------------------------------------------------
@@ -570,4 +658,4 @@ int32_t     signExtend(const uint8_t dataBytes[]);
 
 
 
-#endif
+#endif /* ADS131A04_H_ */

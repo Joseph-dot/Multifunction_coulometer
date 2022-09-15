@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>0</Optim>
+            <Optim>4</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -1598,7 +1598,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>lvgl/src/gpu</GroupName>
+          <GroupName>lvgl/src/gpu</GroupName>
           <Files>
             <File>
               <FileName>lv_draw_sdl.c</FileName>

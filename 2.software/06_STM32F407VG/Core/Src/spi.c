@@ -21,7 +21,7 @@
 #include "spi.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "sys.h"
 /* USER CODE END 0 */
 
 SPI_HandleTypeDef hspi1;
@@ -54,7 +54,9 @@ void MX_SPI1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN SPI1_Init 2 */
-
+	__HAL_SPI_ENABLE(&hspi1);                    //使能SPI1
+	
+	SPI1_ReadWriteByte(0Xff);                           //启动传输
   /* USER CODE END SPI1_Init 2 */
 
 }
@@ -115,5 +117,29 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
 }
 
 /* USER CODE BEGIN 1 */
+
+//SPI速度设置函数
+//SPI速度=fAPB1/分频系数
+//@ref SPI_BaudRate_Prescaler:SPI_BAUDRATEPRESCALER_2~SPI_BAUDRATEPRESCALER_2 256
+//fAPB1时钟一般为42Mhz：
+void SPI1_SetSpeed(u8 SPI_BaudRatePrescaler)
+{
+    assert_param(IS_SPI_BAUDRATE_PRESCALER(SPI_BaudRatePrescaler));//判断有效性
+    __HAL_SPI_DISABLE(&hspi1);            //关闭SPI
+    hspi1.Instance->CR1&=0XFFC7;          //位3-5清零，用来设置波特率
+    hspi1.Instance->CR1|=SPI_BaudRatePrescaler;//设置SPI速度
+    __HAL_SPI_ENABLE(&hspi1);             //使能SPI
+    
+}
+
+//SPI1 读写一个字节
+//TxData:要写入的字节
+//返回值:读取到的字节
+u8 SPI1_ReadWriteByte(u8 TxData)
+{
+    u8 Rxdata;
+    HAL_SPI_TransmitReceive(&hspi1,&TxData,&Rxdata,1, 1000);       
+ 	return Rxdata;          		    //返回收到的数据		
+}
 
 /* USER CODE END 1 */

@@ -57,6 +57,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define ADS_DRDY_Pin GPIO_PIN_3
+#define ADS_DRDY_GPIO_Port GPIOE
 #define ADS_RESET_Pin GPIO_PIN_5
 #define ADS_RESET_GPIO_Port GPIOE
 #define USER_LED_Pin GPIO_PIN_0

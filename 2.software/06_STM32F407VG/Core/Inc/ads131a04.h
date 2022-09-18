@@ -3,6 +3,17 @@
 #include "sys.h"
 #include <stdbool.h>
 
+
+
+
+#define ADS_RESET_H HAL_GPIO_WritePin(ADS_RESET_GPIO_Port, ADS_RESET_Pin, GPIO_PIN_SET)
+#define ADS_RESET_L HAL_GPIO_WritePin(ADS_RESET_GPIO_Port, ADS_RESET_Pin, GPIO_PIN_RESET)
+
+#define SPI1_NSS_H HAL_GPIO_WritePin(SPI1_NSS_GPIO_Port, SPI1_NSS_Pin, GPIO_PIN_SET)
+#define SPI1_NSS_L HAL_GPIO_WritePin(SPI1_NSS_GPIO_Port, SPI1_NSS_Pin, GPIO_PIN_RESET)
+
+#define ADS_DRDY_H HAL_GPIO_WritePin(GPIOE, ADS_DRDY_Pin, GPIO_PIN_SET)
+#define ADS_DRDY_L HAL_GPIO_WritePin(GPIOE, ADS_DRDY_Pin, GPIO_PIN_RESET)
 //****************************************************************************
 //
 // Channel data structure

@@ -1,0 +1,16 @@
+.\stm32f407vg\gifdec.o: ..\LVGL\LVGL\lvgl\src\extra\libs\gif\gifdec.c
+.\stm32f407vg\gifdec.o: ..\LVGL\LVGL\lvgl\src\extra\libs\gif\gifdec.h
+.\stm32f407vg\gifdec.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\stm32f407vg\gifdec.o: ..\LVGL\LVGL\lvgl\src\extra\libs\gif\../../../misc/lv_fs.h
+.\stm32f407vg\gifdec.o: ..\LVGL\LVGL\lvgl\src\extra\libs\gif\../../../misc/../lv_conf_internal.h
+.\stm32f407vg\gifdec.o: ..\LVGL\LVGL\lvgl\src\extra\libs\gif\../../../misc/../lv_conf_kconfig.h
+.\stm32f407vg\gifdec.o: ../LVGL/LVGL/lvgl/examples/porting/../../lv_conf.h
+.\stm32f407vg\gifdec.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\stm32f407vg\gifdec.o: ..\LVGL\LVGL\lvgl\src\extra\libs\gif\../../../misc/lv_log.h
+.\stm32f407vg\gifdec.o: ..\LVGL\LVGL\lvgl\src\extra\libs\gif\../../../misc/lv_types.h
+.\stm32f407vg\gifdec.o: ..\LVGL\LVGL\lvgl\src\extra\libs\gif\../../../misc/lv_mem.h
+.\stm32f407vg\gifdec.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\stm32f407vg\gifdec.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\stm32f407vg\gifdec.o: ..\LVGL\LVGL\lvgl\src\extra\libs\gif\../../../misc/lv_color.h
+.\stm32f407vg\gifdec.o: ..\LVGL\LVGL\lvgl\src\extra\libs\gif\../../../misc/lv_assert.h
+.\stm32f407vg\gifdec.o: ..\LVGL\LVGL\lvgl\src\extra\libs\gif\../../../misc/lv_math.h

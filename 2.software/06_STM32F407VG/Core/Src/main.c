@@ -114,8 +114,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	delay_init(168);
 //	KEY_PWR_Scanf();
-	LCD_Init();
-	cst026_init();
+//	LCD_Init();
+//	cst026_init();
+	ADS131_Init();
 //	NVIC_Init();
 
 #if LVGL_ENABLE
@@ -134,6 +135,8 @@ int main(void)
 #endif
   while (1)
   {
+		HAL_GPIO_TogglePin(USER_LED_GPIO_Port,USER_LED_Pin);
+		delay_ms(500);
 #if LVGL_ENABLE
 		lv_timer_handler();
 		led_off();

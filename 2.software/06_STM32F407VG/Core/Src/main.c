@@ -129,12 +129,13 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 //	lv_demo_benchmark();
-//	lv_demo_music();
+//	lv_demo_music();	
 	lv_demo_widgets();
 //	lv_demo_stress();
 #endif
   while (1)
   {
+		ADS131_GetValue(0);
 		HAL_GPIO_TogglePin(USER_LED_GPIO_Port,USER_LED_Pin);
 		delay_ms(500);
 #if LVGL_ENABLE

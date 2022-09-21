@@ -32,6 +32,8 @@ typedef struct
 } adc_data_struct;
 
 
+extern adc_data_struct ads131_data;
+
 //**********************************************************************************
 //
 // Function prototypes
@@ -54,7 +56,7 @@ typedef struct
 
 
 void ADS131_Init(void);
-
+uint16_t ADS131_GetValue(uint8_t ADC_Channel);
 
 //**********************************************************************************
 //

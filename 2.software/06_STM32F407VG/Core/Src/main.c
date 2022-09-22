@@ -135,7 +135,7 @@ int main(void)
 #endif
   while (1)
   {
-		ADS131_GetValue(0);
+		ADS131_GetValue();
 		HAL_GPIO_TogglePin(USER_LED_GPIO_Port,USER_LED_Pin);
 		delay_ms(500);
 #if LVGL_ENABLE

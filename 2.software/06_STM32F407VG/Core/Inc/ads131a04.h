@@ -56,7 +56,7 @@ extern adc_data_struct ads131_data;
 
 
 void ADS131_Init(void);
-uint16_t ADS131_GetValue(uint8_t ADC_Channel);
+void ADS131_GetValue(void);
 
 //**********************************************************************************
 //

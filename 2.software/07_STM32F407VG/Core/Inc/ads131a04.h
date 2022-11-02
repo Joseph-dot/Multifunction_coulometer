@@ -31,7 +31,7 @@ typedef struct
 
 } adc_data_struct;
 
-typedef struct ADC_Value
+typedef struct
 {
 	double ADC1_Value;
 	double ADC2_Value;
@@ -49,20 +49,6 @@ extern adc_value_struct ads131_value;
 // Function prototypes
 //
 //**********************************************************************************
-
-//uint8_t     getRegisterValue(uint8_t address);
-//void        adcStartup(void);
-//uint8_t     readSingleRegister(uint8_t address);
-//void        writeSingleRegister(uint8_t address, uint8_t data);
-//bool        readData(adc_data_struct *dataStruct);
-//uint16_t    sendCommand(uint16_t opcode);
-//bool        lockRegisters(void);
-//bool        unlockRegisters(void);
-//uint16_t    calculateCRC(const uint8_t dataBytes[], uint8_t numberBytes, uint16_t initialValue);
-
-//// Helper functions
-//void        restoreRegisterDefaults(void);
-//int32_t     signExtend(const uint8_t dataBytes[]);
 
 
 void ADS131_Init(void);

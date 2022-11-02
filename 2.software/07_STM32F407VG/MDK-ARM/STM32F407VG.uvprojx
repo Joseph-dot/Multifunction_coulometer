@@ -2231,19 +2231,9 @@
           <GroupName>lvgl/lvgl_app/gui</GroupName>
           <Files>
             <File>
-              <FileName>ui.c</FileName>
+              <FileName>gui.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\LVGL_APP\GUI\ui.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_comp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\LVGL_APP\GUI\ui_comp.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_helpers.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\LVGL_APP\GUI\ui_helpers.c</FilePath>
+              <FilePath>..\LVGL\LVGL_APP\GUI\gui.c</FilePath>
             </File>
           </Files>
         </Group>

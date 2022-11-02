@@ -10,10 +10,11 @@ adc_data_struct ads131_data;
 adc_value_struct ads131_value;
 
 //#define VREF (2.50497-(-2.46184))	//以电压基准算没用，模拟电压的差值
-#define VREF (2.499810)	//以电压基准算没用，模拟电压的差值
+//#define VREF (2.499810)	//以电压基准算没用，模拟电压的差值
+#define VREF (2.500000)	//以电压基准算没用，模拟电压的差值
 #define V_24bit	8388607	//2^23
 
-#define channel1_err	+0.000093		//校准值
+#define channel1_err	+0.000000		//校准值
 #define channel2_err	+0.000876		//校准值
 #define channel3_err	+0.000605		//校准值
 #define channel4_err	+0.000684		//校准值

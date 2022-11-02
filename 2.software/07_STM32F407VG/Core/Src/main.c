@@ -44,7 +44,7 @@
 #include "lv_demo_widgets.h"
 #include "lv_demo_stress.h"
 
-#include "ui.h"
+#include "gui.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -134,13 +134,17 @@ int main(void)
 //	lv_demo_music();	
 //	lv_demo_widgets();
 //	lv_demo_stress();
-	ui_init();
+	lv_gui();
 #endif
   while (1)
   {
-//		ADS131_GetValue();
-//		HAL_GPIO_TogglePin(USER_LED_GPIO_Port,USER_LED_Pin);
+#if LVGL_ENABLE
+		ADS131_GetValue();
+		HAL_GPIO_TogglePin(USER_LED_GPIO_Port,USER_LED_Pin);
+		lv_label_set_text_fmt(adc_label_1,"Voltage: %f V",ads131_value.ADC1_Value);
 //		delay_ms(500);
+#endif
+		
 #if LVGL_ENABLE
 		lv_timer_handler();
 		led_off();

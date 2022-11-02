@@ -3722,32 +3722,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\LVGL\LVGL_APP\GUI\ui.c</PathWithFileName>
-      <FilenameWithoutPath>ui.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>18</GroupNumber>
-      <FileNumber>283</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\LVGL\LVGL_APP\GUI\ui_comp.c</PathWithFileName>
-      <FilenameWithoutPath>ui_comp.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>18</GroupNumber>
-      <FileNumber>284</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\LVGL\LVGL_APP\GUI\ui_helpers.c</PathWithFileName>
-      <FilenameWithoutPath>ui_helpers.c</FilenameWithoutPath>
+      <PathWithFileName>..\LVGL\LVGL_APP\GUI\gui.c</PathWithFileName>
+      <FilenameWithoutPath>gui.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

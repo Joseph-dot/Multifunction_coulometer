@@ -17,6 +17,9 @@ lv_obj_t *parent4;
 
 
 lv_obj_t *adc_label_1;
+lv_obj_t *adc_label_2;
+lv_obj_t *adc_label_3;
+lv_obj_t *adc_label_4;
 
 
 
@@ -63,6 +66,33 @@ void label1_init(void)
     lv_label_set_text_fmt(adc_label_1,"Voltage: %f V",ads131_value.ADC1_Value);
 }
 
+void label2_init(void)
+{
+    adc_label_2 = lv_label_create(parent2);
+    lv_obj_set_style_text_align(adc_label_2, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN);
+    lv_obj_set_style_text_font(adc_label_2,&lv_font_montserrat_12,LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(adc_label_2, lv_color_make(0xff,0xff,0xff), LV_PART_MAIN);
+    lv_label_set_text_fmt(adc_label_2,"Voltage: %f V",ads131_value.ADC2_Value);
+}
+
+
+void label3_init(void)
+{
+    adc_label_3 = lv_label_create(parent3);
+    lv_obj_set_style_text_align(adc_label_3, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN);
+    lv_obj_set_style_text_font(adc_label_3,&lv_font_montserrat_12,LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(adc_label_3, lv_color_make(0xff,0xff,0xff), LV_PART_MAIN);
+    lv_label_set_text_fmt(adc_label_3,"Voltage: %f V",ads131_value.ADC3_Value);
+}
+
+void label4_init(void)
+{
+    adc_label_4 = lv_label_create(parent4);
+    lv_obj_set_style_text_align(adc_label_4, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN);
+    lv_obj_set_style_text_font(adc_label_4,&lv_font_montserrat_12,LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(adc_label_4, lv_color_make(0xff,0xff,0xff), LV_PART_MAIN);
+    lv_label_set_text_fmt(adc_label_4,"Voltage: %f V",ads131_value.ADC4_Value);
+}
 
 
 
@@ -74,4 +104,8 @@ void lv_gui(void)
     parent3_init();
     parent4_init();
     label1_init();
+		label2_init();
+		label3_init();
+		label4_init();
+	
 }

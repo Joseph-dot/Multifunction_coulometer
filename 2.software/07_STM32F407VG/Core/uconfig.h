@@ -12,7 +12,7 @@
 
 
 /*  user_key set delay  /ms  */
-#define user_pwr_delay 5000
+#define user_pwr_delay 1000
 #define user_key_delay 200
 
 /*	*/

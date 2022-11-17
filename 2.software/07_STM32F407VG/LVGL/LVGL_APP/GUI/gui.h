@@ -16,7 +16,9 @@
 //extern adc_value_struct adc_value;
 
 extern lv_obj_t *adc_label_1;
-
+extern lv_obj_t *adc_label_2;
+extern lv_obj_t *adc_label_3;
+extern lv_obj_t *adc_label_4;
 
 
 void lv_gui(void);

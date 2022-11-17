@@ -89,6 +89,7 @@ int main(void)
   /* USER CODE BEGIN 1 */
 	u8 x=0;
 	u16 color_data[21]={WHITE,BLACK,BLUE,BRED,GRED,GBLUE,RED,MAGENTA,GREEN,CYAN,YELLOW,BROWN,BRRED,GRAY,DARKBLUE,LIGHTBLUE,GRAYBLUE,LIGHTGREEN,LGRAY,LGRAYBLUE,LBBLUE};
+  double adc_value_data;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -115,7 +116,7 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 	delay_init(168);
-//	KEY_PWR_Scanf();
+	KEY_PWR_Scanf();
 	LCD_Init();
 	cst026_init();
 	ADS131_Init();
@@ -138,10 +139,21 @@ int main(void)
 #endif
   while (1)
   {
+		KEY_PWR_Scanf();
+		
 #if LVGL_ENABLE
-		ADS131_GetValue();
+    adc_value_data = 0;
+		for (int i = 0; i < 20; i++)
+    {
+      ADS131_GetValue();
+      adc_value_data += ads131_value.ADC1_Value;
+    }
+    ads131_value.ADC1_Value = adc_value_data/20;
 		HAL_GPIO_TogglePin(USER_LED_GPIO_Port,USER_LED_Pin);
 		lv_label_set_text_fmt(adc_label_1,"Voltage: %f V",ads131_value.ADC1_Value);
+		lv_label_set_text_fmt(adc_label_2,"Voltage: %f V",ads131_value.ADC2_Value);
+		lv_label_set_text_fmt(adc_label_3,"Voltage: %f V",ads131_value.ADC3_Value);
+		lv_label_set_text_fmt(adc_label_4,"Voltage: %f V",ads131_value.ADC4_Value);
 //		delay_ms(500);
 #endif
 		

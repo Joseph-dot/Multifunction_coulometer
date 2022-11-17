@@ -4,6 +4,7 @@
 #include "delay.h"
 #include "usart.h"
 #include "gpio.h"
+#include "lcd.h"
 
 
 SYS sys;
@@ -43,25 +44,20 @@ void KEY_PWR_Scanf(void)
 		else sys.KEY_PWR_Status = 0;
 	}
 	
-//	/*	开机状态长按关机	*/
-//	if(sys.KEY_PWR_Status)
-//	{
-//		if(KEY_PWR == GPIO_PIN_RESET)
-//		{
-//			delay_ms(200);
-//			if(KEY_PWR == GPIO_PIN_RESET)
-//			{
-//				sys.KEY_PWR_Status = 0;
-//				HAL_UART_Transmit(&huart1,"KEY_PWR_Status  -> OFF  \r\n",20,10);
-//				PWR_OFF();
-//			}
-//		}
-//	}
-	
-	
-	/*	*/
-	
-	
+	/*	开机状态长按关机	*/
+	if(sys.KEY_PWR_Status)
+	{
+		if(KEY_PWR == GPIO_PIN_RESET)
+		{
+			delay_ms(1000);
+			if(KEY_PWR == GPIO_PIN_RESET)
+			{
+				HAL_UART_Transmit(&huart1,"KEY_PWR_Status  -> OFF  \r\n",20,10);
+				PWR_OFF();
+				LCD_BL_OFF();
+			}
+		}
+	}
 	
 }
 
